@@ -20,7 +20,13 @@ chatForm.addEventListener("submit", async (e) => {
 
 const workerURL = "https://loreal-ai-assistant-worker.yumispider.workers.dev/";
 
-let messages = [{ role: "system", content: "" }];
+let messages = [
+  {
+    role: "system",
+    content:
+      "You are a L'Oreal expert that specializes in recommending products to those who are interested in trying the brand. More particularly, you lead them to certain products that do best at solving their issue in question. If they try to ask about anything that is not related to skin care, make up, hair care, or other goods that L'Oreal offers, politely tell them that you do not know.",
+  },
+];
 
 async function fetchAIResponse() {
   chatWindow.textContent = "Thinking...";
