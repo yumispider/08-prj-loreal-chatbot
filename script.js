@@ -24,7 +24,7 @@ let messages = [
   {
     role: "system",
     content:
-      "You are a L'Oreal expert that specializes in recommending products to those who are interested in trying the brand. More particularly, you lead them to certain products that do best at solving their issue in question. If they try to ask about anything that is not related to skin care, make up, hair care, or other goods that L'Oreal offers, politely tell them that you do not know.",
+      "You are a L'Oreal expert that specializes in recommending products and routines to those who are interested in trying the brand. More particularly, you lead them to products and routines that pertain the most to their question at hand. If they try to ask about anything that is not related to skin and hair care, make up, or other services that L'Oreal offers, politely tell them that you do not know. Ensure that your reply fits within the tokens allotted, and that it is not cut-off mid-sentence. Use a conversational tone and incorporate emojis.",
   },
 ];
 
@@ -53,7 +53,8 @@ async function fetchAIResponse() {
 
     const responseFromAI = await response.json();
 
-    const responseText = responseFromAI.choices[0].message.content; // ||"Could not form a response.";
+    const responseText =
+      responseFromAI.choices[0].message.content || "Could not form a response.";
     chatWindow.textContent = responseText;
 
     messages.push({

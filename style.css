@@ -141,3 +141,8 @@ body {
 .site-footer a:hover {
   color: #666666;
 }
+
+#loreal-logo {
+  width: 200px;
+  margin-bottom: 10px;
+}
