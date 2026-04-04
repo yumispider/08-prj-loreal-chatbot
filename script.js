@@ -29,6 +29,7 @@ let messages = [
 ];
 
 async function fetchAIResponse() {
+  chatWindow.style.color = "#000000";
   chatWindow.textContent = "Thinking...";
 
   messages.push({
@@ -64,8 +65,9 @@ async function fetchAIResponse() {
     });
   } catch (error) {
     console.error(error);
+    chatWindow.style.color = "#FF003B";
     chatWindow.textContent =
-      "Sorry, something went wrong. Please try again later.";
+      "Sorry, something went wrong. Please try again later. :(";
   }
 
   userInput.value = "";
