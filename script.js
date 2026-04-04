@@ -55,6 +55,7 @@ async function fetchAIResponse() {
 
     const responseText =
       responseFromAI.choices[0].message.content || "Could not form a response.";
+
     chatWindow.textContent = responseText;
 
     messages.push({
@@ -67,5 +68,5 @@ async function fetchAIResponse() {
       "Sorry, something went wrong. Please try again later.";
   }
 
-  //userInput.value = "";
+  userInput.value = "";
 }

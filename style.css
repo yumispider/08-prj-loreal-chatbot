@@ -13,6 +13,11 @@ body {
   justify-content: center;
 }
 
+main,
+input {
+  font-family: "Special Gothic", "Montserrat", Arial, Helvetica, sans-serif;
+}
+
 .page-wrapper {
   width: 90%;
   max-width: 900px;
@@ -70,18 +75,19 @@ body {
 .chat-form input {
   flex: 1;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   font-size: 18px;
 }
 
 .chat-form input:focus {
-  outline: 2px solid #000;
-  outline-offset: 2px;
+  /*outline: 2px solid #000;
+  outline-offset: 2px;*/
+  outline: none;
 }
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
+  background: #e3a535;
   color: #fff;
   border: none;
   padding: 12px;
@@ -99,7 +105,7 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #ffb938;
 }
 
 .chat-form button:focus {
